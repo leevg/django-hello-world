@@ -1,0 +1,25 @@
+.leftcontacts{
+   float: left;
+   width: 50%;
+
+}
+
+.rightcontacts{
+   float:right;
+   width: 50%;
+}
+.requests{
+
+}
+.loginedit{
+    float:right;
+}
+textarea {
+    display: block;
+    clear: both;
+}
+
+#sendmessage {
+
+    clear: both;
+}

@@ -1,12 +1,15 @@
 # Django settings for django_hello_world project.
-
+import os 
+import django 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
-
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -45,19 +48,20 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+#MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
-
+#STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
@@ -69,6 +73,7 @@ ADMIN_MEDIA_PREFIX = '/media/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(SITE_ROOT, 'templates/static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -84,12 +89,21 @@ STATICFILES_FINDERS = (
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'j0ee6taz(y5dqbfp3)dh*+7as@pbs_w25%arj4-ds#j5%zf!nj'
-
+SOUTH_TESTS_MIGRATE = False
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
+)
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -120,6 +134,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'django_hello_world.hello',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging

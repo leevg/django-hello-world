@@ -4,8 +4,8 @@
         "model": "auth.user", 
         "fields": {
             "username": "admin", 
-            "first_name": "", 
-            "last_name": "", 
+            "first_name": "Ivan", 
+            "last_name": "Ivanov", 
             "is_active": true, 
             "is_superuser": true, 
             "is_staff": true, 
@@ -16,5 +16,8 @@
             "email": "admin@example.com", 
             "date_joined": "2011-08-19 09:53:08"
         }
-    }
+    },
+{"pk": 1, "model": "hello.userinfo", "fields": {"bio": "i was born in 1991", "jabber": "leevg@khavr.com", "date_of_birth": "1991-10-28", "skype": "vitalik_lee", "other_contacts": "kiev, kovalskyj 5, 325r"}}
+ 
 ]
+
