@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html" afterPath="$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/models.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/settings.py" afterPath="$PROJECT_DIR$/django_hello_world/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/tests.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/urls.py" afterPath="$PROJECT_DIR$/django_hello_world/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/views.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/views.py" />
     </list>
     <ignored path="django-hello-world.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +56,7 @@
       <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.4390244">
+            <state line="7" column="25" selection-start="247" selection-end="247" vertical-scroll-proportion="0.25609756">
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -611,7 +606,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="471" selection-end="471" vertical-scroll-proportion="0.4390244">
+        <state line="7" column="25" selection-start="247" selection-end="247" vertical-scroll-proportion="0.25609756">
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
