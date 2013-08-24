@@ -7,3 +7,8 @@ class UserInfo(User):
     jabber = models.CharField(max_length=50,blank=True)
     skype = models.CharField(max_length=50,blank=True)
     other_contacts = models.TextField(blank=True)
+
+class RequestInfo(models.Model):
+    method = models.CharField(max_length=5)
+    path = models.CharField(max_length=70)
+    time = models.DateTimeField(auto_now_add=True)

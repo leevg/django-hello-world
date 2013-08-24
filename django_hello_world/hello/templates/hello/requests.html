@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>42 Coffee Cups Test Assingment</h2>
+
+    {% for requestinfo in requests %}
+        <p>
+            Path: {{ requestinfo.path }}
+            method:{{ requestinfo.method }} on: {{ requestinfo.time }}
+        </p>
+    {% endfor %}
+<hr>
+    <p><a href="/">back</a></p>
+{% endblock content %}

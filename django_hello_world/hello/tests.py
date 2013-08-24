@@ -5,7 +5,7 @@ from django.test.client import Client
 class HttpTest(TestCase):
     def test_home(self):
         c = Client()
-        response = c.get(reverse('home'))
+        response = c.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, '42 Coffee Cups Test Assingment')
         self.assertContains(response, 'Email: admin@example.com')
