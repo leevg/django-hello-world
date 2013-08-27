@@ -5,7 +5,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     url(r'^$', 'django_hello_world.hello.views.home', name='home'),
     # url(r'^django_hello_world/', include('django_hello_world.foo.urls')),

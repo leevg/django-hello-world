@@ -6,6 +6,7 @@ from mock import MagicMock
 from models import RequestInfo
 from django.conf import settings
 
+
 class HttpTest(TestCase):
     def test_home(self):
         c = Client()
@@ -18,12 +19,11 @@ class HttpTest(TestCase):
     def test_middleware(self):
         self.gr = GetRequestsToDB()
         self.request = MagicMock()
-        self.request.META['REQUEST_METHOD']='GET'
-        self.request.path='/'
-
-        self.assertEqual(self.gr.process_request(self.request),None)
+        self.request.META['REQUEST_METHOD'] = 'GET'
+        self.request.path = '/'
+        self.assertEqual(self.gr.process_request(self.request), None)
         req_count = RequestInfo.objects.all().count()
-        self.assertEqual(req_count,1)
+        self.assertEqual(req_count, 1)
 
     def test_context_processor(self):
         response = self.client.get('/')
