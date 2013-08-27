@@ -5,7 +5,7 @@ from middleware_request import GetRequestsToDB
 from mock import MagicMock
 from models import RequestInfo
 from django.conf import settings
-
+import datetime
 
 class HttpTest(TestCase):
     def test_home(self):
@@ -24,6 +24,13 @@ class HttpTest(TestCase):
         self.assertEqual(self.gr.process_request(self.request), None)
         req_count = RequestInfo.objects.all().count()
         self.assertEqual(req_count, 1)
+        c = Client()
+        response = c.get(reverse('requests'))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, '42 Coffee Cups Test Assingment')
+        self.assertContains(response, reverse('home'))
+        self.assertTemplateUsed(response, 'hello/requests.html',)
+
 
     def test_context_processor(self):
         response = self.client.get('/')
