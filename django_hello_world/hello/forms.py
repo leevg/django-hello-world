@@ -10,7 +10,7 @@ class CalendarWidget(DateInput):
         js = (
             'js/jquery.min.js',
             'js/jquery-ui-1.8.21.custom.min.js',
-            'js/add_form.js',
+            'js/calendar.js',
         )
 
 
@@ -19,3 +19,12 @@ class UserInfoForm(ModelForm):
         model = UserInfo
         fields = ('first_name', 'last_name', 'date_of_birth', 'photo', 'email',
                   'jabber', 'skype', 'other_contacts', 'bio')
+        widgets = {
+            'date_of_birth': CalendarWidget(),
+        }
+
+    class Media:
+        js = (
+            'js/jquery.min.js',
+            'js/contact_form.js'
+        )

@@ -85,3 +85,25 @@ class UserInfoEditTest(TestCase):
         self.assertContains(response, data['skype'])
         self.assertContains(response, escape(data['bio']))
         self.assertContains(response, escape(data['other_contacts']))
+
+    def test_ajax_form(self):
+        data = dict()
+        data['first_name'] = 'Oleg'
+        data['last_name'] = 'Ivanov'
+        data['date_of_birth'] = '1991-10-28'
+        data['email'] = 'leevg@khavr.com'
+        data['jabber'] = 'vioks@khavr.com'
+        data['skype'] = 'vitalik_lee'
+        data['bio'] = "i was born in 1991"
+        data['other_contacts'] = "kiev, kovalskyj 5, 325r"
+        self.client.login(username='admin', password='admin')
+        self.client.post(reverse('edit'), data,
+                         HTTP_X_REQUESTED_WITH='XMLHttpRequest')
+
+        self.assertEqual(UserInfo.objects.count(), 1)
+
+        userinfo = UserInfo.objects.get(pk=1)
+
+        for key, value in data.items():
+            if key != 'date_of_birth':
+                self.assertEqual(getattr(userinfo, key), value)

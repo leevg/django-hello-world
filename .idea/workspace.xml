@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html" afterPath="$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/forms.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/tests.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/views.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/views.py" />
     </list>
     <ignored path="django-hello-world.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,10 +22,10 @@
     <file path="/tests.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377734925450" ignored="false" />
     <file path="/urls.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377657947240" ignored="false" />
     <file path="/add.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377469049045" ignored="false" />
-    <file path="/forms.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377743236084" ignored="false" />
+    <file path="/forms.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377743479935" ignored="false" />
     <file path="$PROJECT_DIR$/../../coffeesups4/django-hello-world/django_hello_world/hello/views.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377465855374" ignored="false" />
     <file path="$PROJECT_DIR$/../../coffeesups4/django-hello-world/django_hello_world/hello/static/js/contact_form.js" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377466013414" ignored="false" />
-    <file path="/contact_form.js" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377468060508" ignored="false" />
+    <file path="/contact_form.js" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377743518062" ignored="false" />
     <file path="$PROJECT_DIR$/../../coffeesups4/django-hello-world/django_hello_world/hello/tests.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377469472043" ignored="false" />
     <file path="/middleware_request.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377640556359" ignored="false" />
     <file path="/widgets.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377656694407" ignored="false" />
@@ -33,7 +36,7 @@
     <file path="/initial_data.json" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377686879422" ignored="false" />
     <file path="$PROJECT_DIR$/../../coffeesups4/django-hello-world/django_hello_world/hello/models.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377686818806" ignored="false" />
     <file path="/style.css" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377687355384" ignored="false" />
-    <file path="/edit.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377733552477" ignored="false" />
+    <file path="/edit.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377744708983" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +86,7 @@
       <file leaf-file-name="edit.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="10" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
+            <state line="29" column="21" selection-start="776" selection-end="776" vertical-scroll-proportion="-7.7083335">
               <folding />
             </state>
           </provider>
@@ -101,7 +104,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+            <state line="39" column="46" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,7 +113,7 @@
       <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="23" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.0">
+            <state line="109" column="0" selection-start="4454" selection-end="4454" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -118,22 +121,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_hello_world/hello/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="23" column="9" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/django_hello_world/hello/forms.py">
+      <file leaf-file-name="contact_form.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_hello_world/hello/static/js/contact_form.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="9" selection-start="344" selection-end="344" vertical-scroll-proportion="0.47560975">
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
+            <state line="6" column="23" selection-start="231" selection-end="231" vertical-scroll-proportion="0.23136246">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,7 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../7webpages/webpages/app/widgets.py" />
         <option value="$PROJECT_DIR$/../../7webpages/webpages/app/templatetags/my_tags.py" />
         <option value="$PROJECT_DIR$/../../7webpages/webpages/app/views.py" />
         <option value="$PROJECT_DIR$/../../7webpages/webpages/app/tests.py" />
@@ -166,12 +168,13 @@
         <option value="$PROJECT_DIR$/django_hello_world/hello/static/css/style.css" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/base.html" />
-        <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html" />
-        <option value="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
         <option value="$PROJECT_DIR$/django_hello_world/urls.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/models.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/views.py" />
+        <option value="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/forms.py" />
+        <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html" />
+        <option value="$PROJECT_DIR$/django_hello_world/hello/static/js/contact_form.js" />
       </list>
     </option>
   </component>
@@ -443,6 +446,10 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -513,10 +520,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/django_hello_world/hello/static/css" />
+      <recent name="$PROJECT_DIR$/django_hello_world/hello/static/js" />
       <recent name="$PROJECT_DIR$/django_hello_world/hello" />
       <recent name="$PROJECT_DIR$/django_hello_world/hello/templates/hello" />
       <recent name="$PROJECT_DIR$/django_hello_world" />
-      <recent name="$PROJECT_DIR$/django_hello_world/hello/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/django_hello_world/hello" />
@@ -769,19 +776,11 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../7webpages/webpages/app/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="16" selection-start="1456" selection-end="1456" vertical-scroll-proportion="0.40835267" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/fixtures/initial_data.json">
@@ -791,12 +790,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
+        <state line="11" column="0" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/static/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="30" selection-start="250" selection-end="302" vertical-scroll-proportion="0.31914893" />
+        <state line="8" column="30" selection-start="250" selection-end="302" vertical-scroll-proportion="0.31914893">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html">
@@ -813,40 +816,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="10" selection-start="734" selection-end="734" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="40" selection-start="1076" selection-end="1076" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,12 +837,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/static/js/calendar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="46" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="50" selection-start="610" selection-end="610" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="9" selection-start="344" selection-end="344" vertical-scroll-proportion="0.47560975">
+        <state line="23" column="9" selection-start="637" selection-end="637" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="0" selection-start="4454" selection-end="4454" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="21" selection-start="776" selection-end="776" vertical-scroll-proportion="-7.7083335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/static/js/contact_form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="23" selection-start="231" selection-end="231" vertical-scroll-proportion="0.23136246">
+          <folding />
         </state>
       </provider>
     </entry>
