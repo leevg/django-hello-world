@@ -7,6 +7,7 @@ from django.template.defaultfilters import escape, date, linebreaks
 
 from middleware_request import GetRequestsToDB
 from models import RequestInfo, UserInfo
+from templatetags.hello_tags import edit_tag
 
 from mock import MagicMock
 
@@ -107,3 +108,16 @@ class UserInfoEditTest(TestCase):
         for key, value in data.items():
             if key != 'date_of_birth':
                 self.assertEqual(getattr(userinfo, key), value)
+
+class EditLinkTest(TestCase):
+    def test_edit_tag(self):
+        userinfo = UserInfo.objects.get(pk=1)
+        self.assertEqual(edit_tag(userinfo), '/admin/hello/userinfo/1/')
+
+    def test_edit_tag_in_context(self):
+        rendered = Template(
+            '{% load hello_tags %}'
+            '{% edit_tag object %}'
+        ).render(Context({'object': UserInfo.objects.get(pk=1)}))
+
+        self.assertTrue('admin/hello/userinfo/1/' in rendered)
