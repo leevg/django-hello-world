@@ -3,11 +3,23 @@
 {% block content %}
     <h2>42 Coffee Cups Test Assingment</h2>
 
-  <div class="contacts">
+  <div class="loginedit">
+       {% if user.is_authenticated %}
+
+          <a href="/logout">Logout</a>
+           <a href="/edit">Edit</a>
+
+        {% else %}
+           <a href="/login">Login</a>
+       {% endif %}
+
+   </div>
+  <div class="row">
     <div class="leftcontacts">
         <p>Name: {{ userinfo.first_name }}</p>
         <p>Last Name: {{ userinfo.last_name }}</p>
         <p>Date of birth: {{ userinfo.date_of_birth }}</p>
+        <p><img src="{{ userinfo.photo.url }}"></p>
         <p>Bio: {{ userinfo.bio }}</p>
     </div>
     <div class="rightcontacts">
@@ -19,7 +31,6 @@
     </div>
   </div>
 
-  <div class="requests">
-   <p><a href="/requests">requests</a></p>
-  </div>
+
+
 {% endblock content %}

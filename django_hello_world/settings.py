@@ -10,6 +10,11 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGIN_URL = '/login'
+
 MANAGERS = ADMINS
 
 DATABASES = {

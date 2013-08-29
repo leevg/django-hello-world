@@ -10,12 +10,19 @@ urlpatterns = patterns(
     # Examples:
     url(r'^$', 'django_hello_world.hello.views.home', name='home'),
     # url(r'^django_hello_world/', include('django_hello_world.foo.urls')),
-    url(r'^requests/', 'django_hello_world.hello.views.requests', name='requests'),
+    url(r'^requests/', 'django_hello_world.hello.views.requests',
+        name='requests'),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',
+        kwargs={'next_page': '/'}),
+    url(r'^edit/', 'django_hello_world.hello.views.user_info_edit',
+        name='edit'),
+
 )
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+{{ form.media }}
+{% endblock %}
+
+{% block content %}
+<form id="UserInfoForm" enctype="multipart/form-data" action="" method="post">
+        {% csrf_token %}
+
+    <div class="row">
+        <div class="leftcontacts">
+        {% for field in form %}
+
+            {{ field.label_tag }}
+            {{ field }}
+            <div class="errorfield">{{ field.errors }}</div>
+            {% if field.name == 'photo' %}
+                {% if field.value %}
+                    <img src="{{ MEDIA_URL }}{{ field.value }}" alt="Photo" />
+                {% endif %}
+
+            </div>
+            <div class="rightcontacts">
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+        <p id="send">
+            <input type="submit" value="Save" id="id_send"/>
+            <a href='/'>Cancel</a>
+        </p>
+
+</form>
+{% endblock %}
