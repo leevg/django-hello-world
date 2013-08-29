@@ -1,4 +1,6 @@
 from django.forms import ModelForm, DateInput
+from django.utils.safestring import mark_safe
+
 from models import UserInfo
 
 
@@ -10,8 +12,15 @@ class CalendarWidget(DateInput):
         js = (
             'js/jquery.min.js',
             'js/jquery-ui-1.8.21.custom.min.js',
-            'js/calendar.js',
         )
+
+    def render(self, name, value, attrs=None):
+        html = super(CalendarWidget, self).render(name, value, attrs)
+        return mark_safe(
+            html + '''<script type="text/javascript">$(function()
+            {$('#%s').datepicker({dateFormat: 'yy-mm-dd',changeYear:
+            true,changeMonth: true});});</script>''' %
+            attrs['id'])
 
 
 class UserInfoForm(ModelForm):
