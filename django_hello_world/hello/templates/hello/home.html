@@ -5,10 +5,10 @@
 
   <div class="loginedit">
        {% if user.is_authenticated %}
-
+          {% load hello_tags %}
           <a href="/logout">Logout</a>
-           <a href="/edit">Edit</a>
-
+          <a href="/edit">Edit</a>
+          <a href="{% edit_tag userinfo %}">(from admin)</a>
         {% else %}
            <a href="/login">Login</a>
        {% endif %}

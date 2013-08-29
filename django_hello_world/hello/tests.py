@@ -2,7 +2,7 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client, RequestFactory
-from django.template import RequestContext
+from django.template import RequestContext, Template, Context
 from django.template.defaultfilters import escape, date, linebreaks
 
 from middleware_request import GetRequestsToDB
@@ -108,6 +108,7 @@ class UserInfoEditTest(TestCase):
         for key, value in data.items():
             if key != 'date_of_birth':
                 self.assertEqual(getattr(userinfo, key), value)
+
 
 class EditLinkTest(TestCase):
     def test_edit_tag(self):
