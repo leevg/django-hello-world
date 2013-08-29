@@ -36,7 +36,10 @@ def user_info_edit(request):
         form = UserInfoForm(request.POST, request.FILES, instance=userinfo)
         if form.is_valid():
             form.save()
-            return redirect(reverse('home'))
+            if request.is_ajax():
+                return HttpResponse("success")
+            else:
+                return redirect(reverse('home'))
     else:
         form = UserInfoForm(instance=userinfo)
     return render(request, 'hello/edit.html', {'form': form})

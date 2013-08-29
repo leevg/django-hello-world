@@ -6,6 +6,7 @@
 
 {% block content %}
 <form id="UserInfoForm" enctype="multipart/form-data" action="" method="post">
+    <div id="ajax">
         {% csrf_token %}
 
     <div class="row">
@@ -26,10 +27,11 @@
         {% endfor %}
         </div>
     </div>
-        <p id="send">
+        <p id="status">
+        </p>
             <input type="submit" value="Save" id="id_send"/>
             <a href='/'>Cancel</a>
-        </p>
 
+    </div>
 </form>
 {% endblock %}
