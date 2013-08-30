@@ -1,5 +1,9 @@
+import subprocess
+
 from django.db import models
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
+from django.core.management import call_command
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client, RequestFactory
@@ -12,6 +16,8 @@ from templatetags.hello_tags import edit_tag
 from management.commands.print_models import Command
 
 from mock import MagicMock
+
+from StringIO import StringIO
 
 
 class HttpTest(TestCase):
@@ -127,10 +133,17 @@ class EditLinkTest(TestCase):
 
 
 class CommandTest(TestCase):
-    def test_models_command(self):
-        result = {}
-        all_models = models.get_models()
-        for model in all_models:
-            result[model] = model.objects.count()
-        command = Command()
-        self.assertEqual(command.project_models(), result)
+    def check_output(self, output):
+        for model_type in ContentType.objects.all():
+            self.assertIn('%s_%s - %d' % (
+                model_type.app_label,
+                model_type.model,
+                model_type.model_class().objects.count()),
+                output
+            )
+
+    def test_all_models_command(self):
+        stdout = StringIO()
+        stderr = StringIO()
+        call_command('print_models', stderr=stderr, stdout=stdout)
+        self.check_output(stdout.getvalue())
