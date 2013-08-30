@@ -1,3 +1,4 @@
+from django.db import models
 from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.test import TestCase
@@ -8,6 +9,7 @@ from django.template.defaultfilters import escape, date, linebreaks
 from middleware_request import GetRequestsToDB
 from models import RequestInfo, UserInfo
 from templatetags.hello_tags import edit_tag
+from management.commands.print_models import Command
 
 from mock import MagicMock
 
@@ -122,3 +124,13 @@ class EditLinkTest(TestCase):
         ).render(Context({'object': UserInfo.objects.get(pk=1)}))
 
         self.assertTrue('admin/hello/userinfo/1/' in rendered)
+
+
+class CommandTest(TestCase):
+    def test_models_command(self):
+        result = {}
+        all_models = models.get_models()
+        for model in all_models:
+            result[model] = model.objects.count()
+        command = Command()
+        self.assertEqual(command.project_models(), result)
