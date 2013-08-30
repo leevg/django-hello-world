@@ -11,7 +11,7 @@ from django.template import RequestContext, Template, Context
 from django.template.defaultfilters import escape, date, linebreaks
 
 from middleware_request import GetRequestsToDB
-from models import RequestInfo, UserInfo
+from models import RequestInfo, UserInfo, ModelLog
 from templatetags.hello_tags import edit_tag
 from management.commands.print_models import Command
 
@@ -147,3 +147,23 @@ class CommandTest(TestCase):
         stderr = StringIO()
         call_command('print_models', stderr=stderr, stdout=stdout)
         self.check_output(stdout.getvalue())
+
+    def check_last_log_entry_for_action(self, model, action):
+        log = ModelLog.objects.order_by('-created_at')
+        self.assertTrue(len(log) > 0)
+        log_entry = log[0]
+        self.assertEquals(log_entry.app_label, model._meta.app_label)
+        self.assertEquals(log_entry.model_name, model.__class__.__name__)
+        self.assertEquals(log_entry.action, action)
+
+    def test_model_log(self):
+        userinfo = UserInfo.objects.get(pk=1)
+        userinfo.last_name = 'last_name changed'
+        userinfo.save()
+        self.check_last_log_entry_for_action(userinfo, ModelLog.ACTION_UPDATE)
+
+        request = RequestInfo(path='/hello/hello', method='GET')
+        request.save()
+        self.check_last_log_entry_for_action(request, ModelLog.ACTION_CREATE)
+        request.delete()
+        self.check_last_log_entry_for_action(request, ModelLog.ACTION_DELETE)

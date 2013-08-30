@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/django_hello_world/models.sh" afterPath="$PROJECT_DIR$/django_hello_world/print_models.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/management/commands/print_models.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/management/commands/print_models.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/django_hello_world/hello/migrations/0002_load_fitures.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/management/0002_load_fitures.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/models.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/tests.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -19,7 +19,7 @@
     <file path="$PROJECT_DIR$/../../coffeesups4/django-hello-world/django_hello_world/hello/templates/hello/requests.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377302796127" ignored="false" />
     <file path="/requests.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377302796127" ignored="false" />
     <file path="/views.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377807727984" ignored="false" />
-    <file path="/tests.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377872872853" ignored="false" />
+    <file path="/tests.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377874656702" ignored="false" />
     <file path="/urls.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377657947240" ignored="false" />
     <file path="/add.html" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377469049045" ignored="false" />
     <file path="/forms.py" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377807990484" ignored="false" />
@@ -58,13 +58,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="0" selection-start="5748" selection-end="5748" vertical-scroll-proportion="0.81707317">
+            <state line="167" column="24" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="0005_auto__add_modellog.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0005_auto__add_modellog.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.31914893">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,6 +83,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="15" column="9" selection-start="409" selection-end="409" vertical-scroll-proportion="-8.208333">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="43" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,7 +176,6 @@
       <list>
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/base.html" />
         <option value="$PROJECT_DIR$/django_hello_world/urls.py" />
-        <option value="$PROJECT_DIR$/django_hello_world/hello/models.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/edit.html" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/static/js/contact_form.js" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/views.py" />
@@ -169,6 +188,7 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/management/commands/print_models.py" />
+        <option value="$PROJECT_DIR$/django_hello_world/hello/models.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
       </list>
     </option>
@@ -460,33 +480,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django-hello-world" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django-hello-world" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="django_hello_world" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hello" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="management" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="commands" />
+              <option name="myItemId" value="migrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -517,6 +511,7 @@
       <recent name="$PROJECT_DIR$/django_hello_world/hello/templates/hello" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/django_hello_world/hello/management" />
       <recent name="$PROJECT_DIR$/django_hello_world/hello/migrations" />
       <recent name="$PROJECT_DIR$/django_hello_world/hello" />
     </key>
@@ -768,20 +763,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="0" selection-start="722" selection-end="722" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0003_auto__add_requestinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0004_auto__add_field_userinfo_photo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
@@ -789,7 +770,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0002_load_fitures.py">
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/management/0002_load_fitures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -877,12 +858,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="43" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="0" selection-start="5748" selection-end="5748" vertical-scroll-proportion="0.81707317">
+        <state line="167" column="24" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0005_auto__add_modellog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.31914893">
+          <folding />
         </state>
       </provider>
     </entry>
