@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" name="Default" comment="" />
+    <list default="true" id="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/models.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django_hello_world/hello/tests.py" afterPath="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
+    </list>
     <ignored path="django-hello-world.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b27a9e8d-a71b-4c61-a8a1-9a1136abaeb3" time="1377877332955" ignored="false" />
@@ -56,7 +59,7 @@
       <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="24" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
+            <state line="168" column="0" selection-start="6558" selection-end="6558" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,7 +86,7 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="-0.5984042">
+            <state line="51" column="0" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.6143959">
               <folding />
             </state>
           </provider>
@@ -175,8 +178,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/templates/hello/home.html" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/management/commands/print_models.py" />
-        <option value="$PROJECT_DIR$/django_hello_world/hello/models.py" />
         <option value="$PROJECT_DIR$/django_hello_world/hello/tests.py" />
+        <option value="$PROJECT_DIR$/django_hello_world/hello/models.py" />
       </list>
     </option>
   </component>
@@ -857,13 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="24" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/migrations/0005_auto__add_modellog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
@@ -871,9 +867,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/django_hello_world/hello/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="168" column="0" selection-start="6558" selection-end="6558" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/django_hello_world/hello/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="-0.5984042">
+        <state line="51" column="0" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.6143959">
           <folding />
         </state>
       </provider>
