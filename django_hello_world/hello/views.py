@@ -46,6 +46,7 @@ def user_info_edit(request):
         form = UserInfoForm(instance=userinfo)
     return render(request, 'hello/edit.html', {'form': form})
 
+
 @login_required
 def priority_update(request):
     if request.method == 'POST':
