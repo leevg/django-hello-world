@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 
-from forms import UserInfoForm
+from forms import UserInfoForm, RequestInfoFormSet
 
 from models import UserInfo, RequestInfo
 
@@ -19,8 +19,10 @@ def home(request):
 
 @render_to('hello/requests.html')
 def requests(request):
-    requestinfo = RequestInfo.objects.all()[:10]
-    return {'requests': requestinfo}
+    requestinfos = RequestInfo.objects.all()[:10]
+    formset = RequestInfoFormSet(queryset=requestinfos)
+    objects = zip(requestinfos, formset)
+    return {'objects': objects, 'formset': formset}
 
 
 @render_to('hello/home.html')
@@ -43,3 +45,13 @@ def user_info_edit(request):
     else:
         form = UserInfoForm(instance=userinfo)
     return render(request, 'hello/edit.html', {'form': form})
+
+@login_required
+def priority_update(request):
+    if request.method == 'POST':
+        formset = RequestInfoFormSet(request.POST)
+
+        if formset.is_valid():
+            formset.save()
+
+    return redirect('requests')

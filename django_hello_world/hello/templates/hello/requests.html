@@ -1,14 +1,36 @@
 {% extends "base.html" %}
-
+{% block title %}Requests{% endblock %}
 {% block content %}
-    <h2>42 Coffee Cups Test Assingment</h2>
-
-    {% for requestinfo in requests %}
-        <p>
-            Path: {{ requestinfo.path }}
-            method:{{ requestinfo.method }} on: {{ requestinfo.time }}
-        </p>
-    {% endfor %}
-<hr>
-    <p><a href="/">back</a></p>
-{% endblock content %}
+{% load hello_tags %}
+        <h2>42 Coffee Cups Test Assingment</h2>
+<form method="POST" action="/priority_update/">
+    <table>
+        {% csrf_token %}
+        <tr>
+            <th>Id</th>
+            <th>Priority</th>
+            <th>Path</th>
+            <th>Method</th>
+            <th>Time</th>
+            <th>Set priority</th>
+        </tr>
+        {% for request, form in objects %}
+        <tr>
+            <td>{{ request.pk }}</td>
+            <td>{{ request.priority }}</td>
+            <td>{{ request.path }}</td>
+            <td>{{ request.method }}</td>
+            <td>{{ request.time }}</td>
+            <td>
+                {% for choice in form.priority %}
+                    {{ choice }}
+                {% endfor %}
+                {{ form.id }}
+            </td>
+        </tr>
+        {% endfor %}
+        {{ formset.management_form }}
+    </table>
+    <input type="submit" value="Save" />
+</form>
+{% endblock %}

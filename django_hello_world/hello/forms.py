@@ -1,7 +1,8 @@
-from django.forms import ModelForm, DateInput
+from django.forms import ModelForm, DateInput, Select
+from django.forms.models import modelformset_factory
 from django.utils.safestring import mark_safe
 
-from models import UserInfo
+from models import UserInfo, RequestInfo
 
 
 class CalendarWidget(DateInput):
@@ -37,3 +38,20 @@ class UserInfoForm(ModelForm):
             'js/jquery.min.js',
             'js/contact_form.js'
         )
+
+
+class PriorityForm(ModelForm):
+    class Meta:
+        model = RequestInfo
+        fields = ('priority',)
+        widgets = {
+            'priority': Select(),
+        }
+
+
+RequestInfoFormSet = modelformset_factory(
+    RequestInfo,
+    form=PriorityForm,
+    fields=('priority',),
+    extra=0
+)

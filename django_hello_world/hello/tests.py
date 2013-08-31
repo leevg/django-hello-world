@@ -167,3 +167,26 @@ class CommandTest(TestCase):
         self.check_last_log_entry_for_action(request, ModelLog.ACTION_CREATE)
         request.delete()
         self.check_last_log_entry_for_action(request, ModelLog.ACTION_DELETE)
+
+
+class PriorityTest(TestCase):
+    def setUp(self):
+        RequestInfo.objects.all().delete()
+
+    def tearDown(self):
+        RequestInfo.objects.all().delete()
+
+    def test_default_priority(self):
+        self.client.get('/')
+        entry = RequestInfo.objects.get(pk=1)
+        self.assertEqual(entry.priority, 1)
+
+    def test_priority_ordering(self):
+        for i in range(20):
+            self.client.get(reverse('home'))
+        self.client.get(reverse('edit'))
+        entry = RequestInfo.objects.latest('time')
+        entry.priority = 10
+        entry.save()
+        response = self.client.get(reverse('requests'))
+        self.assertContains(response, reverse('edit'))
