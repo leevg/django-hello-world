@@ -3,7 +3,7 @@
 {% block content %}
 {% load hello_tags %}
         <h2>42 Coffee Cups Test Assingment</h2>
-<form method="POST" action="/priority_update/">
+<form method="POST" action="{% url 'priority_update' %}">
     <table>
         {% csrf_token %}
         <tr>
@@ -31,6 +31,6 @@
         {% endfor %}
         {{ formset.management_form }}
     </table>
-    <input type="submit" value="Save" /><a href="/">Back</a>
+    <input type="submit" value="Save" /><a href="{% url 'home' %}">Back</a>
 </form>
 {% endblock %}

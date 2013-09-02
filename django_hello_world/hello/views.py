@@ -1,7 +1,6 @@
 from annoying.decorators import render_to
 
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -23,12 +22,6 @@ def requests(request):
     formset = RequestInfoFormSet(queryset=requestinfos)
     objects = zip(requestinfos, formset)
     return {'objects': objects, 'formset': formset}
-
-
-@render_to('hello/home.html')
-def user_info_edit(request):
-    userinfo = UserInfo.objects.get(pk=1)
-    return {'userinfo': userinfo}
 
 
 @login_required

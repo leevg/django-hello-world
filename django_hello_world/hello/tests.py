@@ -1,6 +1,3 @@
-import subprocess
-
-from django.db import models
 from django.conf import settings
 from django.contrib.contenttypes.models import ContentType
 from django.core.management import call_command
@@ -8,12 +5,11 @@ from django.core.urlresolvers import reverse
 from django.test import TestCase
 from django.test.client import Client, RequestFactory
 from django.template import RequestContext, Template, Context
-from django.template.defaultfilters import escape, date, linebreaks
+from django.template.defaultfilters import escape, date
 
 from middleware_request import GetRequestsToDB
 from models import RequestInfo, UserInfo, ModelLog
 from templatetags.hello_tags import edit_tag
-from management.commands.print_models import Command
 
 from mock import MagicMock
 
@@ -29,15 +25,14 @@ class HttpTest(TestCase):
         self.assertTemplateUsed(response, 'hello/home.html',)
 
     def test_middleware(self):
-        self.gr = GetRequestsToDB()
-        self.request = MagicMock()
-        self.request.META['REQUEST_METHOD'] = 'GET'
-        self.request.path = reverse('home')
-        self.assertEqual(self.gr.process_request(self.request), None)
+        self.client.get(reverse('home'))
+        self.client.get(reverse('requests'))
         req_count = RequestInfo.objects.all().count()
+        req = RequestInfo.objects.get(pk=1)
         self.assertEqual(req_count, 1)
-        c = Client()
-        response = c.get(reverse('requests'))
+        self.assertEqual(req.path, reverse('home'))
+        self.assertEqual(req.method, 'GET')
+        response = self.client.get(reverse('requests'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, '42 Coffee Cups Test Assingment')
         self.assertContains(response, reverse('home'))

@@ -6,11 +6,11 @@
   <div class="loginedit">
        {% if user.is_authenticated %}
           {% load hello_tags %}
-          <a href="/logout">Logout</a>
-          <a href="/edit">Edit</a>
+          <a href="{% url 'logout' %}">Logout</a>
+          <a href="{% url 'edit' %}">Edit</a>
           <a href="{% edit_tag userinfo %}">(from admin)</a>
         {% else %}
-           <a href="/login">Login</a>
+           <a href="{% url 'login' %}">Login</a>
        {% endif %}
 
    </div>
